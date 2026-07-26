@@ -23,13 +23,13 @@
     </div>
   </div>
 
-  <!-- Tag Cloud -->
-  {% if site.tags.size > 0 %}
+  <!-- Article tags (at most 3) — matches post footer tags -->
+  {% if page.tags.size > 0 %}
   <div class="sidebar-card">
     <h3 class="sidebar-title">标签</h3>
     <div class="tag-cloud">
-      {% for tag in site.tags %}
-      <a href="{{ '/tags/' | relative_url }}#{{ tag[0] | slugify }}" class="tag">{{ tag[0] }}</a>
+      {% for tag in page.tags limit:3 %}
+      <a href="{{ '/tags/' | relative_url }}#{{ tag | slugify }}" class="tag">{{ tag }}</a>
       {% endfor %}
     </div>
   </div>
