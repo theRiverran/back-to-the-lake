@@ -10,7 +10,9 @@ layout: default
           <h1 class="entry-title">{{ page.title }}</h1>
           <div class="entry-meta">
             <span class="posted-date">{{ page.date | date: "%Y.%m.%d" }}</span>
-            {% assign reading_time = content | reading_time %}
+            {% assign char_count = content | strip_html | size %}
+            {% assign reading_time = char_count | divided_by: 350 %}
+            {% if reading_time < 1 %}{% assign reading_time = 1 %}{% endif %}
             <span>{{ reading_time }} min read</span>
             {% if page.categories.size > 0 %}
             <span>
