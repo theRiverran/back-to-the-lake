@@ -6,3 +6,6 @@ vendor/
 Gemfile.lock
 .DS_Store
 .claude/
+
+*.docx
+*.txt
