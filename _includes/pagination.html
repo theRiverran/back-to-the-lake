@@ -9,7 +9,8 @@
     {% elsif page == 1 %}
     <a href="{{ '/' | relative_url }}" class="page-btn">{{ page }}</a>
     {% else %}
-    <a href="/page{{ page }}/" class="page-btn">{{ page }}</a>
+    {% assign page_path = '/page' | append: page | append: '/' %}
+    <a href="{{ page_path | relative_url }}" class="page-btn">{{ page }}</a>
     {% endif %}
   {% endfor %}
 
