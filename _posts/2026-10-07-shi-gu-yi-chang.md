@@ -3,6 +3,7 @@ title: "事故一场"
 date: 2026-10-07
 categories: [故事]
 tags: [小说, 猫, 寓言]
+reading_time: 8
 ---
 
 <p class="section-mark">一</p>
